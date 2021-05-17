@@ -1,6 +1,149 @@
 //====================================================================================================
 
 //====================================================================================================
+body {
+	height: 10000px;
+}
+
+
+.header {
+
+	// .header__content
+
+	&__content {
+		width: 100%;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		position: fixed;
+		margin-left: 50%;
+		transform: translate(-50%);
+		background-color: #FBCCBB;
+		display: flex;
+		justify-content: space-between;
+		justify-items: center;
+		align-items: center;
+
+	}
+
+	// .header__logo
+
+	&__logo {
+		img {
+			width: 212px;
+			height: 50px;
+		}
+	}
+
+	// .header__menu
+
+	&__menu {
+	}
+
+	// .header__btn
+
+	&__btn {
+		display: flex;
+		margin-right: 75px;
+		justify-content: center;
+		text-align: center;
+		padding: 20px 24px;
+
+		background-color: #EE4D47;
+		border-radius: 5px;
+
+		font-weight: bold;
+		line-height: 19px;
+		color: #FFFFFF;
+		white-space: nowrap;
+	}
+}
+
+.menu {
+
+	// .menu__icon
+
+	&__icon {
+	}
+
+	// .menu__body
+
+	&__body {
+		display: flex;
+		align-items: center;
+	}
+
+	// .menu__list
+
+	&__list {
+		display: flex;
+		li {
+			margin-right: 104px;
+			a{
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 19px;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			color: #FFFFFF;
+			white-space: nowrap;
+	  	}
+			&:last-child {
+				margin-right: 75px;
+			}
+		}
+	}
+
+	// .menu__link
+
+	&__link {
+	}
+}
+.icon-menu {
+}
+
+//Burger
+.icon-menu {
+	display: none;
+	@media (max-width: $md3+px) {
+		display: block;
+		position: absolute;
+		top: 18px;
+		right: 10px;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span {
+			transition: all 0.3s ease 0s;
+			top: calc(50% - 1px);
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+			&:first-child {
+				top: 0px;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
+		}
+		&._active {
+			span {
+				transform: scale(0);
+				&:first-child {
+					transform: rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+				&:last-child {
+					transform: rotate(45deg);
+					bottom: calc(50% - 1px);
+				}
+			}
+		}
+	}
+}
 
 /*
 //Burger
