@@ -8,6 +8,13 @@ body {
 
 .header {
 
+	&._scroll {
+	background-color: #F37962;
+	height: 100px;
+	position: fixed;
+	width: 100%;
+	z-index: 5;
+    }
 	// .header__content
 
 	&__content {
@@ -16,9 +23,9 @@ body {
 		padding-top: 15px;
 		padding-bottom: 15px;
 		position: fixed;
+		left: 0;
+		right: 0;
 		z-index: 5;
-		margin-left: 50%;
-		transform: translate(-50%);
 		//background-color: #F37962;
 		display: flex;
 		justify-content: space-between;
@@ -145,7 +152,7 @@ body {
 
 .promo {
 	//background: url("../img/header-scene.svg");
-
+	min-height: 570px;
 	&__bg-img {
 		img{
 			position:absolute;
@@ -156,6 +163,7 @@ body {
 	}
 
 	&__bg-track-img {
+
 		position: absolute;
 		left: -30%;
 		top: 650px;
@@ -192,7 +200,11 @@ body {
 			max-width: 570px;
 		}
 		@media (max-width:600px){
-			font-size: 40px;
+			padding-right: 15px;
+			left: 50%;
+			transform: translate(-50%);
+			text-align: center;
+			font-size: 55px;
 			max-width: 400px;
 		}
 	}
@@ -201,6 +213,13 @@ body {
 		position: relative;
 		margin-top: 60px;
 		margin-left: 45px;
+		@media (max-width:600px){
+			margin-left: 0;
+			left: 50%;
+			transform: translate(-50%);
+
+
+		}
 	}
 }
 

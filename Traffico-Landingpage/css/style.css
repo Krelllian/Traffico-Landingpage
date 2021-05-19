@@ -122,6 +122,7 @@ body._lock {
 ._container {
   max-width: 1183px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .btn {
@@ -871,17 +872,23 @@ body {
   height: 10000px;
 }
 
+.header._scroll {
+  background-color: #F37962;
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
 .header__content {
   width: 100%;
   height: 100px;
   padding-top: 15px;
   padding-bottom: 15px;
   position: fixed;
+  left: 0;
+  right: 0;
   z-index: 5;
-  margin-left: 50%;
-  -webkit-transform: translate(-50%);
-      -ms-transform: translate(-50%);
-          transform: translate(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -942,6 +949,10 @@ body {
 
 .icon-menu._active span {
   background-color: #fff;
+}
+
+.promo {
+  min-height: 570px;
 }
 
 .promo__bg-img img {
@@ -1029,10 +1040,64 @@ body {
 }
 */
 
+.about {
+  margin-top: 550px;
+}
+
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.about__title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.1em;
+  color: #EE4D47;
+}
+
+.about__p-1 {
+  margin-top: 40px;
+  max-width: 470px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 40px;
+  color: #402B2B;
+}
+
+.about__p-2 {
+  margin-top: 70px;
+  max-width: 570px;
+  padding: 30px 55px;
+  background-color: #FCDDD4;
+  border-left: 5px solid #ED4D47;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #402B2B;
+  border-radius: 5px 0 0 5px;
+}
+
 .page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+}
+
+.btn_arrow span {
+  padding-right: 45px;
+  background: no-repeat url("../img/right-arrow.svg") right;
 }
 
 @media (min-width: 991.98px) {
@@ -1044,8 +1109,8 @@ body {
 
 @media (min-width: 992px) {
   .btn:hover {
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 10px rgba(240, 20, 20, 0.5);
+            box-shadow: 0 0 10px rgba(240, 20, 20, 0.5);
   }
 
   .select__option:hover {
@@ -1190,8 +1255,22 @@ body {
 
 @media (max-width: 600px) {
   .promo__title {
-    font-size: 40px;
+    padding-right: 15px;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    text-align: center;
+    font-size: 55px;
     max-width: 400px;
+  }
+
+  .promo__btn {
+    margin-left: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
   }
 }
 
