@@ -9,9 +9,11 @@ body {
 .header {
 
 	&._scroll {
+	//margin-top: 500px;
 	background-color: #F37962;
 	height: 100px;
 	position: fixed;
+	//top: 100px;
 	width: 100%;
 	z-index: 5;
     }
@@ -23,6 +25,7 @@ body {
 		padding-top: 15px;
 		padding-bottom: 15px;
 		position: fixed;
+		//top: 0;
 		left: 0;
 		right: 0;
 		z-index: 5;
@@ -38,6 +41,7 @@ body {
 
 	&__logo {
 		img {
+
 			width: 212px;
 			height: 50px;
 		}
@@ -155,6 +159,7 @@ body {
 	min-height: 570px;
 	&__bg-img {
 		img{
+			max-width: initial;
 			position:absolute;
 			top: -100px;
 			left: -10%;

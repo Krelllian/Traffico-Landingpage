@@ -7,13 +7,20 @@
 
     &__content {
         display: flex;
-
+        @media (max-width:$md2+px){
+            flex-wrap: wrap;
+            text-align: center;
+        }
     }
 
     // .about__column
 
     &__column {
-        flex: 0 0 50%;
+        flex: 0 1 55%;
+        @media (max-width:$md2+px){
+            flex: 0 1 100%;
+            text-align: center;
+        }
     }
 
     // .about__title
@@ -22,7 +29,6 @@
         font-weight: bold;
         font-size: 24px;
         line-height: 40px;
-        align-items: center;
         letter-spacing: 0.1em;
         color: #EE4D47;
     }
@@ -36,6 +42,10 @@
         font-size: 18px;
         line-height: 40px;
         color: #402B2B;
+        @media (max-width:$md2+px){
+           max-width: 100%;
+           margin: 30px 20px;
+        }
     }
 
     // .about__p-2
@@ -51,11 +61,24 @@
         line-height: 36px;
         color: #402B2B;
         border-radius: 5px 0 0 5px;
+        @media (max-width:$md2+px){
+            max-width: 100%;
+            margin: 30px 20px;
+        }
     }
 
     // .about__img
 
     &__img {
+        flex: 0 1 45%;
+        @media (max-width:$md2+px){
+            flex-basis: 100%;
+        }
+        img {
+
+           // width: 576px;
+            //height: 480px;
+        }
     }
 }
 
@@ -66,6 +89,224 @@
     &_pink {
     }
 }
+//</about>========================================================================================================================================================
 
 
-//====================================================================================================
+//<how-to>====================================================================================================
+
+.how-to {
+     margin-top: 100px;
+    // .how-to__content
+
+    &__content {
+        display: flex;
+        @media (max-width:$md2+px){
+            flex-wrap: wrap;
+            text-align: center;
+
+        }
+    }
+
+    // .how-to__img
+
+    &__img {
+        //flex-shrink: 1;
+        width: 50%;
+        @media (max-width:$md2+px){
+            margin-top: 25px;
+            width: 100%;
+            order: 2;
+        }
+        img{
+            max-width: 100%;
+            position: relative;
+       // flex-basis: 0 1 30%;
+    }
+    }
+
+    // .how-to__column
+
+    &__column {
+        width: 50%;
+        @media (max-width:$md2+px){
+            width: 100%;
+        }
+       // flex: 1 0 70%;
+    }
+
+    // .how-to__title
+
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 40px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #EE4D47;
+    }
+
+    // .how-to__p
+
+    &__p {
+        margin-top: 40px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 40px;
+        color: #402B2B;
+    }
+}
+
+//</how-to>========================================================================================================================================================
+
+//<faq>========================================================================================================================================================
+
+
+.faq {
+
+    // .faq__content
+
+    &__content {
+        position: relative;
+        margin-top: 150px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 10%;
+            border-radius: 100px 0 0 0;
+            content: "";
+            background: no-repeat  #FDEDE8;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+    }
+
+    // .faq__row
+
+    &__row {
+        display: flex;
+        @media (max-width:$md2+px){
+            flex-wrap: wrap;
+            text-align: center;
+        }
+    }
+
+    // .faq__column
+
+    &__column {
+        width: 40%;
+        @media (max-width:$md2+px){
+            width: 100%;
+        }
+    }
+
+    // .faq__title
+
+    &__title {
+        margin-top: 130px;
+
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 40px;
+        letter-spacing: 0.1em;
+        color: #EE4D47;
+    }
+
+    // .faq__p
+
+    &__p {
+        margin-top: 44px;
+        font-family: DM Serif Display;
+        font-size: 48px;
+        line-height: 140%;
+        color: #402B2B;
+        @media (max-width:$md3+px){
+             font-size: 40px;
+        }
+    }
+
+    // .faq__img
+
+    &__img {
+        width: 60%;
+        @media (max-width:$md2+px){
+            width: 100%;
+            margin-top: 50px;
+        }
+    }
+}
+
+.faq {
+
+    // .faq__spollers
+
+    &__spollers {
+        margin-top: 90px;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+}
+
+.spollers-faq {
+
+    // .spollers-faq__item
+
+    &__item {
+        width: 50%;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        @media (max-width:$md2+px){
+            width: 100%;
+        }
+        @media (max-width:$md4+px){
+             padding-right: 0;
+        }
+    }
+
+    // .spollers-faq__title
+
+    &__title {
+        padding: 25px 115px 25px 35px;
+        background: no-repeat  url(../img/faq__+.svg) #fff;
+        background-position: bottom 50% right 30px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+        color: #402B2B;
+        &._active {
+            background: no-repeat  url(../img/faq__-.svg) #fff;
+            background-position: bottom 50% right 30px;
+        }
+
+        @media (max-width:$md4+px){
+              padding-right: 60px;
+              background-position: bottom 50% right 20px;
+              &._active {
+                background-position: bottom 50% right 20px;
+            }
+        }
+    }
+
+    // .spollers-faq__body
+
+    &__body {
+        display: none;
+        padding: 40px 35px 60px;
+        background: rgb(254,233,231);
+        background: linear-gradient(180deg, rgba(254,233,231,1) 0%, rgba(255,247,245,1) 100%);
+        border-radius: 0 0 10px 10px ;
+
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 30px;
+        color: #402B2B;
+    }
+}
+
+
+//</faq>========================================================================================================================================================
