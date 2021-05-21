@@ -278,6 +278,7 @@
         font-size: 18px;
         line-height: 30px;
         color: #402B2B;
+        cursor: pointer;
         &._active {
             background: no-repeat  url(../img/faq__-.svg) #fff;
             background-position: bottom 50% right 30px;
@@ -310,3 +311,145 @@
 
 
 //</faq>========================================================================================================================================================
+
+
+//<reviews>========================================================================================================================================================
+
+.reviews {
+    margin-top: 150px;
+    // .reviews__content
+    @media (max-width:$md3+px){
+         margin-top: 50px;
+    }
+
+    &__content {
+        display: flex;
+        @media (max-width:$md3+px){
+             flex-wrap: wrap;
+        }
+    }
+
+    // .reviews__column
+
+    &__column {
+        width: 35%;
+        @media (max-width:$md3+px){
+             width: 100%;
+             text-align: center;
+        }
+
+    }
+
+    // .reviews__title
+
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 40px;
+        letter-spacing: 0.1em;
+        color: #EE4D47;
+    }
+
+    // .reviews__p
+
+    &__p {
+        margin-top: 44px;
+
+        font-family: DM Serif Display;
+        font-size: 48px;
+        line-height: 140%;
+        color: #402B2B;
+    }
+
+    // .reviews__slider
+
+    &__slider {
+
+        &__wrapper {
+            min-width: 0;
+            width: 65%;
+            margin-top: 95px;
+            position: relative;
+            @media (max-width:$md3+px){
+                width: 100%;
+
+           }
+        }
+
+       &__item_prev {
+        position: absolute;
+        top: -64px;
+        right: 125px;
+        transform: rotate(180deg);
+        cursor: pointer;
+        @media (max-width:$md3+px){
+             display: none;
+        }
+       }
+
+       &__item_next {
+        position: absolute;
+        top: -60px;
+        right: 65px;
+        cursor: pointer;
+        @media (max-width:$md3+px){
+            display: none;
+       }
+    }
+    }
+
+    // .reviews__slide
+
+    &__slide {
+        position: relative;
+        padding: 60px 48px 40px;
+        padding-bottom: 140px;
+        width: 420px;
+        min-height: 430px;
+        background-color: #fff;
+        border-radius: 10px;
+
+    }
+}
+
+.slide-reviews {
+
+    // .slide-reviews__p
+
+    &__p {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 30px;
+        color: #402B2B;
+    }
+
+    // .slide-reviews__name
+
+    &__name {
+        position: absolute;
+        bottom: 40px;
+        margin-top: 60px;
+        padding-left: 80px;
+        line-height: 60px;
+        white-space: nowrap;
+        // .slide-reviews__name_1
+
+        &_1 {
+            background: no-repeat left url(../img/slide-1__photo.svg);
+        }
+
+        // .slide-reviews__name_2
+
+        &_2 {
+            background: no-repeat left url(../img/slide-2__photo.svg);
+        }
+
+        // .slide-reviews__name_3
+
+        &_3 {
+            background: no-repeat left url(../img/slide-1__photo.svg);
+        }
+    }
+}
+
+//</reviews>========================================================================================================================================================

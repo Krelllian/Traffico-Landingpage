@@ -61,7 +61,7 @@ if (sliderScrollItems.length > 0) {
 
 function sliders_bild_callback(params) { }
 
-let slider_about = new Swiper('.about__slider', {
+let slider_reviews = new Swiper('.reviews__slider', {
 	/*
 	effect: 'fade',
 	autoplay: {
@@ -71,13 +71,13 @@ let slider_about = new Swiper('.about__slider', {
 	*/
 	observer: true,
 	observeParents: true,
-	slidesPerView: 1,
-	spaceBetween: 0,
+	slidesPerView: 2,
+	spaceBetween: 20,
 	autoHeight: true,
-	speed: 800,
+	speed: 600,
 	//touchRatio: 0,
 	//simulateTouch: false,
-	//loop: true,
+	loop: true,
 	//preloadImages: false,
 	//lazy: true,
 	// Dotts
@@ -87,30 +87,30 @@ let slider_about = new Swiper('.about__slider', {
 	//},
 	// Arrows
 	navigation: {
-		nextEl: '.about__more .more__item_next',
-		prevEl: '.about__more .more__item_prev',
+		nextEl: '.reviews__slider__item_next',
+		prevEl: '.reviews__slider__item_prev',
 	},
-	/*
+
 	breakpoints: {
 		320: {
 			slidesPerView: 1,
-			spaceBetween: 0,
+			spaceBetween: 20,
 			autoHeight: true,
 		},
-		768: {
+		// 768: {
+		// 	slidesPerView: 2,
+		// 	spaceBetween: 20,
+		// },
+		992: {
 			slidesPerView: 2,
 			spaceBetween: 20,
 		},
-		992: {
-			slidesPerView: 3,
-			spaceBetween: 20,
-		},
-		1268: {
-			slidesPerView: 4,
-			spaceBetween: 30,
-		},
+		// 1268: {
+		// 	slidesPerView: 4,
+		// 	spaceBetween: 30,
+		// },
 	},
-	*/
+
 	on: {
 		lazyImageReady: function () {
 			ibg();
