@@ -129,8 +129,11 @@
 			text-transform: uppercase;
 			color: #FFFFFF;
 			white-space: nowrap;
+			&._active {
+				color: #df3523;
+			}
 			&:hover {
-				color: #F06252;
+				color: #df3523;
 			}
 			@media (max-width:$md3+px){
 				 font-size: 25px;

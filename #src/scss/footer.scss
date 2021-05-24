@@ -10,6 +10,7 @@
         left: -240px;
         z-index: -1;
         max-width: initial;
+
     }
 
     // .footer__content
@@ -17,6 +18,7 @@
     &__content {
         position: relative;
         padding-top: 50px;
+
     }
 
     // .footer__row
@@ -36,12 +38,13 @@
         align-items: center;
 
        @media (max-width:$md3+px){
-        padding-top: 30px;
+        padding-top: 50px;
         padding-bottom: 40px;
         flex-wrap: wrap;
         text-align: center;
 
         background-color: #0F264C;
+        margin-top: -20px;
         margin-right: -20px;
         margin-left: -20px;
     }
@@ -88,6 +91,10 @@
 
     &__logo {
         margin-right: 20px;
+        img{
+        max-width: 218px;
+        max-height: 58px;
+    }
         @media (max-width:$md3+px){
             margin-right: 0;
              width: 100%;
@@ -114,13 +121,18 @@
 
          li {
             margin-right: 90px;
-
+            a {
             line-height: 19px;
             letter-spacing: 0.05em;
             text-transform: uppercase;
             color: #FFFFFF;
             white-space: nowrap;
+            transition: all 0.3s ease 0s;
 
+            &:hover {
+                color: #F06252;
+            }
+            }
             @media (max-width:$md2+px){
                 margin-right: 60px;
             }
@@ -135,11 +147,61 @@
     // .footer__socials
 
     &__socials {
+        margin-top: 170px;
+        margin-bottom: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width:$md3+px){
+             margin-top: 50px;
+             margin-bottom: 50px;
+
+        }
+        @media (max-width:$md4+px){
+            flex-wrap: wrap;
+
+        }
+
+    // .footer__socials__ul
+
+        &__ul {
+            display: flex;
+            @media (max-width:$md4+px){
+                margin-bottom: 40px;
+                // width: 100%;
+                 margin-left: 50%;
+                 transform: translate(-50%);
+                 order: -1;
+            }
+
+            img {
+                width: 36px;
+                height: 36px;
+                transition: all 0.3s ease 0s;
+                &:hover {
+                    filter: saturate(150%);
+                }
+            }
+            li {
+            margin-right: 30px;
+            @media (max-width:$md3+px){
+                 margin-right: 15px;
+                 &:last-child{
+                     margin-right: 0;
+                 }
+            }
+        }
+        }
+
     }
 
     // .footer__copyright
 
     &__copyright {
+        @media (max-width:$md4+px){
+             width: 100%;
+             text-align: center;
+        }
     }
 }
 
