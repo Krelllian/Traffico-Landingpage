@@ -85,6 +85,10 @@ let slider_reviews = new Swiper('.reviews__slider', {
 	//	el: '.slider-quality__pagging',
 	//	clickable: true,
 	//},
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
 	// Arrows
 	navigation: {
 		nextEl: '.reviews__slider__item_next',
